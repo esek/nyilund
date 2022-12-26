@@ -1,0 +1,26 @@
+---
+import type { Locale } from '../models/i18n';
+import '@/styles/main.scss';
+
+export type Props = {
+  title: string;
+  language: Locale;
+};
+
+const { title, language } = Astro.props;
+---
+
+<html lang={language}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | E-Sektionen inom TLTH</title>
+  </head>
+  <body class="bg-primary-black">
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

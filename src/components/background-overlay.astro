@@ -1,0 +1,18 @@
+---
+import { Image } from '@astrojs/image/components';
+export type Props = {
+  src: ImageMetadata | string;
+  alt: string;
+  height?: number;
+  width?: number;
+  aspectRatio?: number;
+};
+---
+
+<div class="relative h-full w-full">
+  <div class="absolute inset-0 bg-black/80"></div>
+  <Image {...Astro.props} format="webp" class="h-full w-full object-cover" />
+  <div class="absolute inset-0 flex items-center justify-center max-w">
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,28 @@
+---
+import type { FaqQuestion } from '@/models/faq';
+import Heading from '../heading.astro';
+import FaqQuestionComponent from './faq-question.astro';
+
+const questions = await Astro.glob<FaqQuestion>('../../content/faq/*.md');
+---
+
+<div class="space-y-24 text-white">
+  <div class="text-center space-y-2">
+    <Heading larger={true}>Frågor och Svar</Heading>
+    <p class="max-w-md mx-auto">
+      Vi har samlat de vanligaste frågorna vi får nedan, om du inte hittar det
+      du söker så får du gärna kontakta oss!
+    </p>
+  </div>
+  <div class="space-y-4">
+    {
+      questions.map(({ frontmatter, compiledContent }, i) => (
+        <FaqQuestionComponent
+          title={frontmatter.title}
+          content={compiledContent()}
+          key={i}
+        />
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,14 @@
+@tailwind base;
+
+@font-face {
+  font-family: 'E-Sek Font';
+  src: url('/font.woff2') format('woff2');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+@layer base {
+  .max-w {
+    @apply max-w-7xl mx-auto px-8 xl:px-0;
+  }
+}

@@ -1,0 +1,39 @@
+---
+import MainLayout from '../layouts/main-layout.astro';
+import Hero from '@/components/hero.astro';
+import Heading from '@/components/heading.astro';
+import BackgroundOverlay from '@/components/background-overlay.astro';
+import FAQ from '@/components/faq/faq.astro';
+import domkyrkan from '@/assets/domkyrkan.jpeg';
+---
+
+<MainLayout title="Välkommen till Lund!" language="sv">
+  <Hero />
+
+  <div class="p-24 bg-white text-center">
+    <Heading>Letar du information om nollningen?</Heading>
+    <div>
+      <!-- TODO: Add buttons -->
+    </div>
+  </div>
+
+  <div class="h-[80dvh]">
+    <BackgroundOverlay src={domkyrkan} alt="Domkyrkan - Source: Wikipedia">
+      <div class="flex flex-col text-white items-center text-center gap-4">
+        <Heading larger={true}>Hej och välkommen till Lund!</Heading>
+        <p class="max-w-xl text-lg">
+          Lund kan kännas som en liten stad, men med nästan hälften av
+          befolkningen som studenter finns det alltid något att göra. Som ny
+          student möts du av en uppsjö av föreningar som sysslar med allt från
+          spex, fester och olika sporter, allt bara några minuter bort på
+          cykeln. Lund hade inte varit den staden den är utan studenterna och
+          det är därför den anses var Sveriges bästa studentstad.
+        </p>
+      </div>
+    </BackgroundOverlay>
+  </div>
+
+  <div class="py-24 max-w text-center">
+    <FAQ />
+  </div>
+</MainLayout>

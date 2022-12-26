@@ -1,0 +1,25 @@
+---
+import BackgroundOverlay from '@/components/background-overlay.astro';
+import heroImage from '@/assets/e-house.png';
+---
+
+<div class="h-[100dvh]">
+  <BackgroundOverlay
+    src={heroImage}
+    alt="E-Huset LTH"
+    width={1920}
+    aspectRatio={16 / 9}
+  >
+    <div class="flex items-center justify-center flex-col text-white gap-4">
+      <h1 class="font-black text-4xl md:text-8xl text-center">
+        Välkommen till Sveriges
+        <br />
+        bästa studentstad!
+      </h1>
+
+      <p class="text-lg md:text-2xl">
+        Vi hoppas du väljer att börja hos oss på E-Sektionen
+      </p>
+    </div>
+  </BackgroundOverlay>
+</div>
