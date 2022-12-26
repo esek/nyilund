@@ -1,0 +1,33 @@
+---
+export type Props = {
+  href: string;
+  variant?: 'primary' | 'secondary';
+};
+
+const { href, variant = 'primary' } = Astro.props;
+---
+
+<a href={href} data-variant={variant}>
+  <slot />
+</a>
+
+<style lang="scss">
+  a {
+    --background: theme('colors.white');
+    --color: theme('colors.black');
+
+    &[data-variant='secondary'] {
+      --background: theme('colors.black');
+      --color: theme('colors.white');
+    }
+
+    background: var(--background);
+    color: var(--color);
+
+    @apply px-12 py-3 inline-block font-semibold rounded-sm;
+
+    &:hover {
+      @apply opacity-80;
+    }
+  }
+</style>

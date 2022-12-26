@@ -1,6 +1,7 @@
 ---
 import BackgroundOverlay from '@/components/background-overlay.astro';
 import heroImage from '@/assets/e-house.png';
+import Button from './button.astro';
 ---
 
 <div class="h-[100dvh]">
@@ -20,6 +21,11 @@ import heroImage from '@/assets/e-house.png';
       <p class="text-lg md:text-2xl">
         Vi hoppas du väljer att börja hos oss på E-Sektionen
       </p>
+
+      <div class="flex items-center gap-4">
+        <Button href="">Om programmen</Button>
+        <Button href="#faq">FAQ</Button>
+      </div>
     </div>
   </BackgroundOverlay>
 </div>

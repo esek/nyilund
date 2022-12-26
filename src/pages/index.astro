@@ -5,16 +5,15 @@ import Heading from '@/components/heading.astro';
 import BackgroundOverlay from '@/components/background-overlay.astro';
 import FAQ from '@/components/faq/faq.astro';
 import domkyrkan from '@/assets/domkyrkan.jpeg';
+import Button from '@/components/button.astro';
 ---
 
 <MainLayout title="Välkommen till Lund!" language="sv">
   <Hero />
 
-  <div class="p-24 bg-white text-center">
-    <Heading>Letar du information om nollningen?</Heading>
-    <div>
-      <!-- TODO: Add buttons -->
-    </div>
+  <div class="p-24 bg-white text-center space-y-4">
+    <Heading larger={true}>Letar du information om nollningen?</Heading>
+    <Button href="" variant="secondary">Om Nollningen</Button>
   </div>
 
   <div class="h-[80dvh]">

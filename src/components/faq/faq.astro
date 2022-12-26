@@ -1,19 +1,28 @@
 ---
 import type { FaqQuestion } from '@/models/faq';
+import Button from '../button.astro';
 import Heading from '../heading.astro';
 import FaqQuestionComponent from './faq-question.astro';
 
+const CONTACT_URL = 'https://esek.se/contact';
 const questions = await Astro.glob<FaqQuestion>('../../content/faq/*.md');
 ---
 
-<div class="space-y-24 text-white">
+<section class="space-y-24 text-white" id="faq">
   <div class="text-center space-y-2">
     <Heading larger={true}>Frågor och Svar</Heading>
     <p class="max-w-md mx-auto">
       Vi har samlat de vanligaste frågorna vi får nedan, om du inte hittar det
-      du söker så får du gärna kontakta oss!
+      du söker så får du gärna <a
+        href={CONTACT_URL}
+        target="_blank"
+        rel="noreferrer"
+      >
+        kontakta oss!
+      </a>
     </p>
   </div>
+
   <div class="space-y-4">
     {
       questions.map(({ frontmatter, compiledContent }, i) => (
@@ -25,4 +34,9 @@ const questions = await Astro.glob<FaqQuestion>('../../content/faq/*.md');
       ))
     }
   </div>
-</div>
+
+  <div class="space-y-4">
+    <Heading larger={true}>Hittade du inte det du sökte?</Heading>
+    <Button href={CONTACT_URL}>Skicka ett mail</Button>
+  </div>
+</section>
