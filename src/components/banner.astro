@@ -1,0 +1,21 @@
+---
+import Button from './button.astro';
+import Heading from './heading.astro';
+
+export type Props = {
+  title: string;
+  button: string;
+  href: string;
+};
+
+const { title, button, href } = Astro.props;
+---
+
+<div class="p-24 bg-white text-center space-y-4">
+  <Heading larger={true}>
+    {title}
+  </Heading>
+  <Button href={href} variant="secondary">
+    {button}
+  </Button>
+</div>

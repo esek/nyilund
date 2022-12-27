@@ -1,4 +1,22 @@
 ---
+import Logo from './logo.astro';
 ---
 
-<footer></footer>
+<footer class="text-white bg-black">
+  <a
+    href="https://esek.se"
+    target="_blank"
+    rel="norferrer"
+    class="max-w py-4 text-center space-y-2 block"
+  >
+    <div class="h-12 aspect-square text-white mx-auto">
+      <Logo />
+    </div>
+    <div class="font-bold">
+      <p>E-Sektionen inom TLTH</p>
+    </div>
+  </a>
+  <div class="bg-white text-black py-2">
+    <div class="max-w text-center text-sm">Skapad med kärlek av InfU 2022</div>
+  </div>
+</footer>

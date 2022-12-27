@@ -2,6 +2,7 @@
 import type { Locale } from '../models/i18n';
 import '@/styles/main.scss';
 import Footer from '@/components/footer.astro';
+import Navbar from '@/components/navbar.astro';
 
 export type Props = {
   title: string;
@@ -23,6 +24,8 @@ const description =
     <title>{title} | E-Sektionen inom TLTH</title>
   </head>
   <body class="bg-primary-black">
+    <Navbar locale={language} />
+
     <main>
       <slot />
     </main>

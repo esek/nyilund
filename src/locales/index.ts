@@ -4,8 +4,26 @@ import get from 'lodash/get';
 import { default as en } from './en.json';
 import { default as sv } from './sv.json';
 
-export const getTranslations = (locale: Locale) => {
-  return (key: string) => {
+const pages = {
+  home: '/',
+  nollning: '/nollning',
+};
+
+type Translation = (key: string) => string;
+type Route = (page: keyof typeof pages) => string;
+
+export const getTranslations = (locale: Locale): [Translation, Route] => {
+  const t = (key: string) => {
     return get({ en, sv }, `${locale}.${key}`) ?? key;
   };
+
+  const route = (page: keyof typeof pages) => {
+    if (locale === 'sv') {
+      return pages[page];
+    }
+
+    return `/${locale}${pages[page]}`;
+  };
+
+  return [t, route];
 };

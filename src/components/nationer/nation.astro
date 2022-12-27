@@ -1,0 +1,29 @@
+---
+import { Image } from '@astrojs/image/components';
+
+export type Props = {
+  name: string;
+  url: string;
+  image: ImageMetadata | string;
+};
+
+const { name, url, image } = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="norefferer"
+  class="flex flex-col items-center gap-2 font-semibold bg-gray-50 rounded-md p-4 border hover:border-black"
+>
+  <Image
+    src={image}
+    width={300}
+    height={300}
+    alt={name}
+    class="h-[150px] w-[150px]"
+  />
+  <p>
+    {name}
+  </p>
+</a>

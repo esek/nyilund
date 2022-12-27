@@ -1,0 +1,98 @@
+---
+import { getTranslations } from '@/locales';
+import type { Locale } from '@/models/i18n';
+import TextSection from '../text-section.astro';
+import og from '@/assets/nationer/og.png';
+import vg from '@/assets/nationer/vg.png';
+import lunds from '@/assets/nationer/lunds.png';
+import malmos from '@/assets/nationer/malmos.png';
+import hb from '@/assets/nationer/hb.png';
+import ssk from '@/assets/nationer/ssk.png';
+import krischan from '@/assets/nationer/krischan.png';
+import bl from '@/assets/nationer/bl.png';
+import gbg from '@/assets/nationer/gbg.png';
+import hl from '@/assets/nationer/hl.png';
+import kalmar from '@/assets/nationer/kalmar.png';
+import wermlands from '@/assets/nationer/wermlands.png';
+import Nation from './nation.astro';
+
+export type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const [t] = getTranslations(locale);
+
+const nationer = [
+  {
+    name: 'Östgöta Nation',
+    url: 'https://www.ostgota.nu/',
+    image: og,
+  },
+  {
+    name: 'Västgöta Nation',
+    url: 'https://www.vgnation.se/',
+    image: vg,
+  },
+  {
+    name: 'Lunds Nation',
+    url: 'https://lundsnation.com/',
+    image: lunds,
+  },
+  {
+    name: 'Malmö Nation',
+    url: 'https://www.malmonation.com/',
+    image: malmos,
+  },
+  {
+    name: 'Helsingkrona Nation',
+    url: 'https://helsingkrona.se/',
+    image: hb,
+  },
+  {
+    name: 'Sydskånska Nationen',
+    url: 'https://sydskanska.se/',
+    image: ssk,
+  },
+  {
+    name: 'Kristianstads Nation',
+    url: 'https://www.krnation.se/',
+    image: krischan,
+  },
+  {
+    name: 'Blekingksa Nationen',
+    url: 'https://www.blekingska.se/',
+    image: bl,
+  },
+  {
+    name: 'Göteborgs Nation',
+    url: 'https://www.goteborgsnation.com/',
+    image: gbg,
+  },
+  {
+    name: 'Hallands Nation',
+    url: 'https://www.hallandsnation.se/',
+    image: hl,
+  },
+  {
+    name: 'Kalmar Nation',
+    url: 'https://www.kalmarnation.nu/',
+    image: kalmar,
+  },
+  {
+    name: 'Wermlands Nation',
+    url: 'https://www.wermlandsnation.se/',
+    image: wermlands,
+  },
+];
+---
+
+<div class="py-24 bg-white">
+  <TextSection title={t('nations.title')}>
+    {t('nations.content')}
+  </TextSection>
+
+  <div class="max-w flex flex-wrap gap-4 md:gap-8 mt-12 justify-center">
+    {nationer.map((nation) => <Nation {...nation} />)}
+  </div>
+</div>

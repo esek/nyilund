@@ -1,19 +1,30 @@
 {
+  "titles": {
+    "home": "Välkommen till Lund!",
+    "nollning": "Nollningen på E-Sektionen"
+  },
   "hero": {
-    "title": {
-      "first": "Välkommen till Sveriges",
-      "second": "bästa studentstad"
+    "home": {
+      "title": {
+        "first": "Välkommen till Sveriges",
+        "second": "bästa studentstad!"
+      },
+      "subtitle": "Vi hoppas du väljer att börja hos oss på E-Sektionen",
+      "cta": {
+        "about": "Om programmen",
+        "faq": "FAQ"
+      }
     },
-    "subtitle": "Vi hoppas du väljer att börja hos oss på E-Sektionen",
-    "cta": {
-      "about": "Om programmen",
-      "faq": "FAQ"
+    "nollning": {
+      "title": "Nollningen på E-Sektionen",
+      "subtitle": "Nollningen på E-sektionen är till för att välkomna alla nya studenter till Lund, LTH och E-sektionen. Som Nolla kan man vara väldigt vilsen, man kan till exempel tappa bort sig i E-husets lokaler, glömma bort tiden, eller kanske till och med ta ett dopp i sjön Sjøn. Det är just därför som det finns Phøs, Phaddrar och en hel sektion med ett hjärta av guld som är här för att vägleda dig under din första tid som student."
     }
   },
   "banner": {
     "nollning": {
       "title": "Letar du information om nollningen?",
-      "button": "Om nollningen"
+      "button": "Om nollningen",
+      "check_website": "Kolla in nollningshemsidan!"
     }
   },
   "welcome": {
@@ -26,5 +37,24 @@
     "contact": "kontakta oss!",
     "not_found": "Hittade du inte det du sökte?",
     "send_an_email": "Skicka ett mail"
+  },
+  "nollning": {
+    "what": {
+      "title": "Vad är nollningen?",
+      "content": "Nollningen är en blandning av lek, stoj, fest och plugg, vilket betyder att det finns något för alla. Vad som är säkert är att den kommer ge dig guldvärda minnen för livet. Första dagen på LTH delas du in i en phaddergrupp och kommer direkt att introduceras till både nyantagna och gamla studenter. Phaddrarna som har erfarenhet av livet på LTH kommer hjälpa och stötta dig och kommer kunna svara på alla möjliga sorters frågor. Phaddergruppen kommer vara en trygg punkt under hela nollningen, men med tiden kommer du självklart umgås andra på nollningen också!"
+    },
+    "differences": {
+      "title": "Skillnad mot gymnasiet",
+      "content": "Om du har hört skräckhistorier om olika gymnasienollningar är det viktigt att veta nollningen på LTH är till för dig och för att du ska känna trygg och välkommen. Nollningen är helt frivillig och den stora blandningen av aktiviteter gör att man kan delta i det som passar ens intressen. Det viktigaste är att ALLA som deltar ska känna att de blir en del av en sektionens gemenskap, känner sig trygga på LTH och skapar vänner för livet."
+    }
+  },
+  "nations": {
+    "title": "Lunds Nationer",
+    "content": "Nationerna är nog de mest klassiska föreningarna i Lund och det man ofta tänker på när Lunds studentliv nämns. Förr i tiden gick man med i den nationen som representerade det landskap eller geografiska region där man kom ifrån, men nu för tiden får alla studenter gå med i vilken nation de vill. Gemensamt för alla nationer är att alla studenter ofta är välkomna på de evenemang som anordnas, även om de inte är medlemmar. Däremot kan medlemmar få vissa fördelar som billigare inträde eller att få stå i nationens bostadskö. Så kika runt på de olika nationerna här nedan och se vilken som passar dig bäst! Är du inte nöjd med nationen du gått med i så kan du alltid byta nästa termin!"
+  },
+  "lundakarnevalen": {
+    "title": "Lundakarnevalen",
+    "content": "Det går inte att prata om Lund utan att nämna Lundakarnevalen! Som ett av världens största event helt organiserat av frivilgarbetande studenter är det unikt i sitt slag. Vart fjärde tar studenterna i Lund för en helg över parken vid Domkyrkan, även känt som Lundagård. Hår anordnas allt du kan tänka dig, spelbordar, föreställningar, cirkus, barer, restauranger och mycket mer. Nästa karneval går av stapeln 2026!",
+    "button": "Läs mer om Lundakarnevalen"
   }
 }

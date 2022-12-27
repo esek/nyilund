@@ -9,13 +9,13 @@ export type Props = {
 const { title, content } = Astro.props;
 ---
 
-<details class="text-left bg-white/10 rounded-sm text-white px-8">
-  <summary class="py-8 hover:opacity-80 cursor-pointer">
+<details class="text-left bg-white/10 rounded-sm text-white">
+  <summary class="hover:opacity-80 cursor-pointer p-8">
     <Heading class="inline-block pl-2">
       {title}
     </Heading>
   </summary>
-  <div set:html={content} class="pb-8" />
+  <div set:html={content} class="px-8 pb-8 max-w-6xl" />
 </details>
 
 <style lang="scss">

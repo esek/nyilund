@@ -5,9 +5,11 @@ export type Props = {
 };
 
 const { href, variant = 'primary' } = Astro.props;
+
+const target = href.startsWith('http') ? '_blank' : null;
 ---
 
-<a href={href} data-variant={variant}>
+<a href={href} data-variant={variant} target={target}>
   <slot />
 </a>
 
