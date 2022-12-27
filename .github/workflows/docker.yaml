@@ -125,8 +125,6 @@ jobs:
           secrets: |
             kv/data/common registry_username;
             kv/data/common registry_password;
-            kv/data/${{ needs.env-vars.outputs.basename }}/${{ needs.env-vars.outputs.env }} API_URL;
-            kv/data/${{ needs.env-vars.outputs.basename }}/${{ needs.env-vars.outputs.env }} API_TOKEN;
       - name: setup buildx
         uses: docker/setup-buildx-action@v2
         with:

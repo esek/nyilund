@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  nyilund:
+    extends:
+      file: docker-compose.ci.yml
+      service: nyilund
+    restart: unless-stopped
