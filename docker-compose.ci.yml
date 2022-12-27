@@ -9,6 +9,7 @@ services:
     image: '${IMAGE_NAME}'
     environment:
       NODE_ENV: production
+      DEPLOY_URL: '${DEPLOY_URL}'
     networks:
       - traefik
       - default
