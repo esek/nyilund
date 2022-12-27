@@ -92,7 +92,9 @@ const nationer = [
     {t('nations.content')}
   </TextSection>
 
-  <div class="max-w flex flex-wrap gap-4 md:gap-8 mt-12 justify-center">
+  <div
+    class="max-w grid grid-cols-2 md:flex flex-wrap gap-2 md:gap-8 mt-12 items-center justify-center"
+  >
     {nationer.map((nation) => <Nation {...nation} />)}
   </div>
 </div>

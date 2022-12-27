@@ -5,10 +5,7 @@
   },
   "hero": {
     "home": {
-      "title": {
-        "first": "Välkommen till Sveriges",
-        "second": "bästa studentstad!"
-      },
+      "title": "Välkommen till Sveriges bästa studentstad!",
       "subtitle": "Vi hoppas du väljer att börja hos oss på E-Sektionen",
       "cta": {
         "about": "Om programmen",

@@ -21,9 +21,9 @@ const { name, url, image } = Astro.props;
     width={300}
     height={300}
     alt={name}
-    class="h-[150px] w-[150px]"
+    class="aspect-square w-[150px]"
   />
-  <p>
+  <p class="text-center">
     {name}
   </p>
 </a>
