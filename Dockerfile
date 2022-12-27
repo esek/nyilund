@@ -9,6 +9,9 @@ RUN yarn install --frozen-lockfile
 
 COPY . .
 
+ARG DEPLOY_URL
+ENV DEPLOY_URL=${DEPLOY_URL}
+
 RUN yarn build
 
 FROM nginx:alpine
