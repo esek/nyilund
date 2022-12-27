@@ -1,42 +1,58 @@
 ---
+import { getTranslations } from '@/locales';
 import type { FaqQuestion } from '@/models/faq';
+import type { Locale } from '@/models/i18n';
 import Button from '../button.astro';
 import Heading from '../heading.astro';
 import FaqQuestionComponent from './faq-question.astro';
 
+export type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+
 const CONTACT_URL = 'https://esek.se/contact';
-const questions = await Astro.glob<FaqQuestion>('../../content/faq/*.md');
+const content = await Astro.glob<FaqQuestion>('../../content/faq/*/*.md');
+
+const questions = content.filter((c) => {
+  const localePath = c.file.split('/').at(-2);
+  return localePath === locale;
+});
 ---
 
 <section class="space-y-24 text-white" id="faq">
   <div class="text-center space-y-2">
-    <Heading larger={true}>Frågor och Svar</Heading>
+    <Heading larger={true}>
+      {t('faq.title')}
+    </Heading>
     <p class="max-w-md mx-auto">
-      Vi har samlat de vanligaste frågorna vi får nedan, om du inte hittar det
-      du söker så får du gärna <a
-        href={CONTACT_URL}
-        target="_blank"
-        rel="noreferrer"
-      >
-        kontakta oss!
+      {t('faq.description')}
+      {' '}
+      <a href={CONTACT_URL} target="_blank" rel="noreferrer">
+        {t('faq.contact')}
       </a>
     </p>
   </div>
 
   <div class="space-y-4">
     {
-      questions.map(({ frontmatter, compiledContent }, i) => (
+      questions.map(({ frontmatter, compiledContent }) => (
         <FaqQuestionComponent
           title={frontmatter.title}
           content={compiledContent()}
-          key={i}
         />
       ))
     }
   </div>
 
   <div class="space-y-4">
-    <Heading larger={true}>Hittade du inte det du sökte?</Heading>
-    <Button href={CONTACT_URL}>Skicka ett mail</Button>
+    <Heading larger={true}>
+      {t('faq.not_found')}
+    </Heading>
+    <Button href={CONTACT_URL}>
+      {t('faq.send_an_email')}
+    </Button>
   </div>
 </section>

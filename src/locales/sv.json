@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "title": {
+      "first": "Välkommen till Sveriges",
+      "second": "bästa studentstad"
+    },
+    "subtitle": "Vi hoppas du väljer att börja hos oss på E-Sektionen",
+    "cta": {
+      "about": "Om programmen",
+      "faq": "FAQ"
+    }
+  },
+  "banner": {
+    "nollning": {
+      "title": "Letar du information om nollningen?",
+      "button": "Om nollningen"
+    }
+  },
+  "welcome": {
+    "title": "Hej och välkommen till Lund!",
+    "content": "Lund kan kännas som en liten stad, men med nästan hälften av befolkningen som studenter finns det alltid något att göra. Som ny student möts du av en uppsjö av föreningar som sysslar med allt från spex, fester och olika sporter, allt bara några minuter bort på cykeln. Lund hade inte varit den staden den är utan studenterna och det är därför den anses var Sveriges bästa studentstad."
+  },
+  "faq": {
+    "title": "Frågor och Svar",
+    "description": "Vi har samlat de vanligaste frågorna vi får nedan, om du inte hittar det du söker så får du gärna",
+    "contact": "kontakta oss!",
+    "not_found": "Hittade du inte det du sökte?",
+    "send_an_email": "Skicka ett mail"
+  }
+}

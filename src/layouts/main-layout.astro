@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../models/i18n';
 import '@/styles/main.scss';
+import Footer from '@/components/footer.astro';
 
 export type Props = {
   title: string;
@@ -8,6 +9,8 @@ export type Props = {
 };
 
 const { title, language } = Astro.props;
+const description =
+  'Lund kan kännas som en liten stad, men med nästan hälften av befolkningen som studenter finns det alltid något att göra. Som ny student möts du av en uppsjö av föreningar som sysslar med allt från spex, fester och olika sporter, allt bara några minuter bort på cykeln. ';
 ---
 
 <html lang={language}>
@@ -16,11 +19,14 @@ const { title, language } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
     <title>{title} | E-Sektionen inom TLTH</title>
   </head>
   <body class="bg-primary-black">
     <main>
       <slot />
     </main>
+
+    <Footer />
   </body>
 </html>

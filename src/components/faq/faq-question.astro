@@ -4,23 +4,19 @@ import Heading from '../heading.astro';
 export type Props = {
   title: string;
   content: string;
-  key: number;
 };
 
-const { title, content, key } = Astro.props;
+const { title, content } = Astro.props;
 ---
 
-<section class="text-left bg-white/10 rounded-sm text-white px-8">
-  <input type="checkbox" class="hidden" id={`faq-${key}`} />
-
-  <label class="py-8 block cursor-pointer hover:opacity-80" for={`faq-${key}`}>
-    <Heading>{title}</Heading>
-  </label>
-
-  <div data-expanding>
-    <div set:html={content} />
-  </div>
-</section>
+<details class="text-left bg-white/10 rounded-sm text-white px-8">
+  <summary class="py-8 hover:opacity-80 cursor-pointer">
+    <Heading class="inline-block pl-2">
+      {title}
+    </Heading>
+  </summary>
+  <div set:html={content} class="pb-8" />
+</details>
 
 <style lang="scss">
   [data-expanding] {

@@ -1,5 +1,9 @@
 @tailwind base;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'E-Sek Font';
   src: url('/font.woff2') format('woff2');

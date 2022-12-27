@@ -1,0 +1,48 @@
+---
+import MainLayout from '@/layouts/main-layout.astro';
+import Hero from '@/components/hero.astro';
+import Heading from '@/components/heading.astro';
+import BackgroundOverlay from '@/components/background-overlay.astro';
+import FAQ from '@/components/faq/faq.astro';
+import domkyrkan from '@/assets/domkyrkan.jpeg';
+import Button from '@/components/button.astro';
+import type { Locale } from '@/models/i18n';
+import { getTranslations } from '@/locales';
+
+export type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+---
+
+<MainLayout title="Välkommen till Lund!" language={locale}>
+  <Hero locale={locale} />
+
+  <div class="p-24 bg-white text-center space-y-4">
+    <Heading larger={true}>
+      {t('banner.nollning.title')}
+    </Heading>
+    <Button href="" variant="secondary">
+      {t('banner.nollning.button')}
+    </Button>
+  </div>
+
+  <div class="h-[80dvh]">
+    <BackgroundOverlay src={domkyrkan} alt="Domkyrkan - Source: Wikipedia">
+      <div class="flex flex-col text-white items-center text-center gap-4">
+        <Heading larger={true}>
+          {t('welcome.title')}
+        </Heading>
+        <p class="max-w-xl text-lg">
+          {t('welcome.content')}
+        </p>
+      </div>
+    </BackgroundOverlay>
+  </div>
+
+  <div class="py-24 max-w text-center">
+    <FAQ locale={locale} />
+  </div>
+</MainLayout>
