@@ -1,4 +1,4 @@
-# 💚 Ny i Lund - Studentguide
+# 💚 Ny i Lund - Student guide
 
 A website for new students at Lund University in order for them to get a head start in understanding the city, the university and the student life.
 
