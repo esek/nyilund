@@ -1,5 +1,5 @@
 ---
-import { getTranslations, locales } from '@/locales';
+import { getTranslations } from '@/locales';
 import type { Locale } from '@/models/i18n';
 import Logo from '@/components/logo.astro';
 import Link from '../link.astro';
@@ -31,22 +31,14 @@ type LocaleInfo = {
   href: string;
 };
 
-const { pathname } = Astro.url;
-
-const split = pathname
-  .split('/')
-  .filter((s) => Boolean(s) && !Object.keys(locales).includes(s));
-
-const currRoute = (split.length > 0 ? split[0] : 'home') as any;
-
 const availableLocales: Record<Locale, LocaleInfo> = {
   sv: {
     label: 'SWE',
-    href: routes(currRoute, 'sv'),
+    href: routes('home', 'sv'),
   },
   en: {
     label: 'ENG',
-    href: routes(currRoute, 'en'),
+    href: routes('home', 'en'),
   },
 };
 
