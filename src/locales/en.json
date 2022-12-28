@@ -9,9 +9,12 @@
     "created_by": "Created with love by INFU 2022"
   },
   "titles": {
-    "home": "Welcome to Lund!",
-    "nollning": "The nollning at the E-Guild",
-    "about": "About the programs"
+    "home": "Welcome to Lund! | New in Lund, your guide to the student life in Lund and at LTH",
+    "nollning": "The nollning at LTH and the E-Guild | New in Lund",
+    "about": "About the programs | New in Lund"
+  },
+  "descriptions": {
+    "main": "Newly admitted and curious about what awaits you? Here you will find all the information you need to get a good start in Lund. We collect information about everything from student life to practical things like finding an apartment."
   },
   "hero": {
     "home": {

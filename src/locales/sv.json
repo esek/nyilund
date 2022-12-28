@@ -9,9 +9,12 @@
     "created_by": "Skapad med kärlek av INFU 2022"
   },
   "titles": {
-    "home": "Välkommen till Lund!",
-    "nollning": "Nollningen på E-Sektionen",
-    "about": "Om programmen"
+    "home": "Välkommen till Lund! | Ny i Lund, din guide för studentlivet i Lund och på LTH",
+    "nollning": "Nollningen på LTH och E-Sektionen | Ny i Lund",
+    "about": "Om E-Sektionens program | Ny i Lund"
+  },
+  "descriptions": {
+    "main": "Nyantagen och nyfiken på vad som väntar? Här hittar du all information du behöver för att få en bra start i Lund. Vi samlar information om allt från studentlivet till praktiska saker som att hitta en lägenhet."
   },
   "hero": {
     "home": {

@@ -14,12 +14,12 @@ type Translation = (key: string) => string;
 type Route = (page: keyof typeof pages, locale?: Locale) => string;
 
 export const getTranslations = (currLocale: Locale): [Translation, Route] => {
-  const t = (key: string) => {
+  const translate: Translation = (key) => {
     const k = `${currLocale}.${key}`;
     return get({ en, sv }, k) || k;
   };
 
-  const route = (page: keyof typeof pages, locale = currLocale) => {
+  const route: Route = (page, locale = currLocale) => {
     if (locale === 'sv') {
       return pages[page];
     }
@@ -27,5 +27,5 @@ export const getTranslations = (currLocale: Locale): [Translation, Route] => {
     return `/${locale}${pages[page]}`;
   };
 
-  return [t, route];
+  return [translate, route];
 };
