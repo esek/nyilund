@@ -2,13 +2,20 @@
 export type Props = {
   href: string;
   class?: string;
+  ariaLabel?: string;
 };
 
-const { href, class: className } = Astro.props;
+const { href, class: className, ariaLabel } = Astro.props;
 const target = href.startsWith('http') ? '_blank' : null;
 const rel = target === '_blank' ? 'noreferrer' : null;
 ---
 
-<a href={href} class:list={[className]} target={target} rel={rel}>
+<a
+  href={href}
+  class:list={[className]}
+  target={target}
+  rel={rel}
+  aria-label={ariaLabel}
+>
   <slot />
 </a>
