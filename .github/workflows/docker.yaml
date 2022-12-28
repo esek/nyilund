@@ -144,8 +144,7 @@ jobs:
           context: .
           push: true
           build-args: |
-            API_URL=${{ steps.s.outputs.API_URL }}
-            API_TOKEN=${{ steps.s.outputs.API_TOKEN }}
+            DEPLOY_URL=${{ steps.s.outputs.DEPLOY_URL }}
           tags: ${{ needs.env-vars.outputs.image_name }}
 
   # This should need build and use the image to test
