@@ -1,0 +1,6 @@
+---
+const { host } = Astro.url;
+const src = 'https://analytics.esek.se/js/plausible.js';
+---
+
+<script defer data-domain={host} src={src}></script>

@@ -4,6 +4,7 @@ import '@/styles/main.scss';
 import Footer from '@/components/layout/footer.astro';
 import Navbar from '@/components/layout/navbar.astro';
 import { DEFAULT_LOACLE, getTranslations, locales } from '@/locales';
+import Analytics from '@/components/analytics.astro';
 
 export type Props = {
   title: string;
@@ -20,6 +21,7 @@ const baseUrl = Astro.url.origin;
   <head>
     <title>{title}</title>
     <meta charset="utf-8" />
+    <Analytics />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
