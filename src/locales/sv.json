@@ -3,6 +3,11 @@
     "about": "Om programmen",
     "nollning": "Nollning"
   },
+  "footer": {
+    "info": "Ny i Lund är en sida skapad av E-Sektionen inom TLTH för att hjälpa nya studenter få en lättare start i Lund. Vi samlar information om allt från studentlivet till praktiska saker som att hitta en lägenhet.",
+    "open_source": "Vi är opensource!",
+    "created_by": "Skapad med kärlek av INFU 2022"
+  },
   "titles": {
     "home": "Välkommen till Lund!",
     "nollning": "Nollningen på E-Sektionen",

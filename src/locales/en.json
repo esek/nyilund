@@ -1,1 +1,98 @@
-{}
+{
+  "nav": {
+    "about": "About the programs",
+    "nollning": "Nollning"
+  },
+  "footer": {
+    "info": "New in Lund is a website created by E-Sektionen within TLTH to help new students get an easier start in Lund. We collect information about everything from student life to practical things like finding an apartment.",
+    "open_source": "We are opensource!",
+    "created_by": "Created with love by INFU 2022"
+  },
+  "titles": {
+    "home": "Welcome to Lund!",
+    "nollning": "The nollning at the E-Guild",
+    "about": "About the programs"
+  },
+  "hero": {
+    "home": {
+      "title": "Welcome to the best student city in Sweden!",
+      "subtitle": "We hope you choose to join us at the E-Guild",
+      "cta": {
+        "about": "About the programs",
+        "faq": "FAQ"
+      }
+    },
+    "nollning": {
+      "title": "The nollning at the E-Guild",
+      "subtitle": ""
+    }
+  },
+  "banner": {
+    "nollning": {
+      "title": "Looking for information about the nollning?",
+      "button": "About the nollning",
+      "check_website": "Check out the nollningswebsite!"
+    }
+  },
+  "welcome": {
+    "title": "Hello and welcome to Lund!",
+    "content": ""
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "We have collected the most common questions we get below, if you can't find what you're looking for you can always",
+    "contact": "contact us!",
+    "not_found": "Unable to find what you were looking for?",
+    "send_an_email": "Send us an email"
+  },
+  "nollning": {
+    "what": {
+      "title": "What is the nollning?",
+      "content": ""
+    },
+    "differences": {
+      "title": "Differences from Gymnasiet",
+      "content": ""
+    }
+  },
+  "nations": {
+    "title": "Nations in Lund",
+    "content": ""
+  },
+  "lundakarnevalen": {
+    "title": "Lundakarnevalen",
+    "content": "",
+    "button": "Read more about Lundakarnevalen"
+  },
+  "more_in_lund": {
+    "title": "More to do in Lund",
+    "content": "There are many things to do in Lund!",
+    "activities": {
+      "spex": {
+        "title": "Spex",
+        "content": ""
+      },
+      "karer": {
+        "title": "Kårer",
+        "content": ""
+      },
+      "valborg": {
+        "title": "Last of April (Valborg)",
+        "content": ""
+      }
+    }
+  },
+  "about": {
+    "programs": {
+      "e": {
+        "title": "Elektroteknik",
+        "description": " Elektroteknik handlar om att utveckla framtidens teknik och samhälle i allt från medicinsk utrustning till självkörande fordon, robotar, 5G-nät och förnyelsebara energikällor. Efter utbildningen finns det en god arbetsmarknad där du har möjlighet att skapa hållbara lösningar för dagens och morgondagens samhälle. "
+      },
+      "bme": {
+        "title": "Medicin och Teknik",
+        "description": "Utbildningen i Medicin och teknik vid LTH är unik i Sverige och är till för dig som är tvärvetenskapligt intresserad och som vill lägga grunden till framtidens hälsa. Här ger vi dig de kunskaper som efterfrågas inom såväl medicinteknisk industri och forskning som hälso- och sjukvård. Programmet är utvecklat i samarbete med industrin och betonar därför design och innovation med patientsäkerhet som viktigt krav. Flera kurser ges på sjukhuset för att du ska få nyttiga insikter i hur medicintekniska produkter används i vården. "
+      },
+      "read_more": "Läs mer på lth.se"
+    }
+  }
+}

@@ -25,6 +25,26 @@ const navLinks = [
     href: 'https://esek.se',
   },
 ];
+
+type LocaleInfo = {
+  label: string;
+  href: string;
+};
+
+const currRoute = Astro.url.pathname.split('/').at(-1) || ('home' as any);
+
+const locales: Record<Locale, LocaleInfo> = {
+  sv: {
+    label: 'SWE',
+    href: routes(currRoute, 'sv'),
+  },
+  en: {
+    label: 'ENG',
+    href: routes(currRoute, 'en'),
+  },
+};
+
+const otherLocale = Object.entries(locales).find(([l]) => l !== locale)![1];
 ---
 
 <header
@@ -35,8 +55,17 @@ const navLinks = [
       <Logo />
     </a>
 
-    <nav class="items-center gap-4 font-semibold hidden md:flex">
-      {navLinks.map((link) => <Link href={link.href}>{link.label}</Link>)}
-    </nav>
+    <div class="flex items-center gap-8">
+      <nav class="items-center gap-4 font-semibold hidden md:flex">
+        {navLinks.map((link) => <Link href={link.href}>{link.label}</Link>)}
+      </nav>
+
+      <Link
+        href={otherLocale.href}
+        class="block text-sm px-4 py-1 border rounded-sm bg-white/10"
+      >
+        {otherLocale.label}
+      </Link>
+    </div>
   </div>
 </header>

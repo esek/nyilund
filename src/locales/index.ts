@@ -11,15 +11,15 @@ const pages = {
 };
 
 type Translation = (key: string) => string;
-type Route = (page: keyof typeof pages) => string;
+type Route = (page: keyof typeof pages, locale?: Locale) => string;
 
-export const getTranslations = (locale: Locale): [Translation, Route] => {
+export const getTranslations = (currLocale: Locale): [Translation, Route] => {
   const t = (key: string) => {
-    const k = `${locale}.${key}`;
-    return get({ en, sv }, k) ?? k;
+    const k = `${currLocale}.${key}`;
+    return get({ en, sv }, k) || k;
   };
 
-  const route = (page: keyof typeof pages) => {
+  const route = (page: keyof typeof pages, locale = currLocale) => {
     if (locale === 'sv') {
       return pages[page];
     }
