@@ -3,7 +3,7 @@ import type { Locale } from '@/models/i18n';
 import '@/styles/main.scss';
 import Footer from '@/components/layout/footer.astro';
 import Navbar from '@/components/layout/navbar.astro';
-import { getTranslations } from '@/locales';
+import { DEFAULT_LOACLE, getTranslations, locales } from '@/locales';
 
 export type Props = {
   title: string;
@@ -13,15 +13,28 @@ export type Props = {
 
 const [t] = getTranslations(Astro.props.locale);
 const { title, locale, description = t('descriptions.main') } = Astro.props;
+const baseUrl = Astro.url.origin;
 ---
 
 <html lang={locale}>
   <head>
+    <title>{title}</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    {
+      Object.keys(locales).map((locale) => {
+        const isDefault = locale === DEFAULT_LOACLE;
+        const path = isDefault ? '' : `/${locale}`;
+        const lang = isDefault ? 'x-default' : locale;
+
+        return (
+          <link rel="alternate" hreflang={lang} href={`${baseUrl}${path}`} />
+        );
+      })
+    }
     <link
       rel="preload"
       href="/font.woff2"
@@ -29,7 +42,6 @@ const { title, locale, description = t('descriptions.main') } = Astro.props;
       type="font/woff2"
       crossorigin
     />
-    <title>{title}</title>
   </head>
   <body class="bg-primary-black">
     <Navbar locale={locale} />
