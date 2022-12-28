@@ -1,16 +1,17 @@
 ---
 import MainLayout from '@/layouts/main-layout.astro';
 import Hero from '@/components/hero.astro';
-import BackgroundOverlay from '@/components/background-overlay.astro';
-import FAQ from '@/components/faq/faq.astro';
+import BackgroundOverlay from '@layout/background-overlay.astro';
+import FAQ from '@/components/faq.astro';
 import domkyrkan from '@/assets/domkyrkan.jpeg';
 import type { Locale } from '@/models/i18n';
 import { getTranslations } from '@/locales';
-import Banner from '../banner.astro';
-import TextSection from '../text-section.astro';
+import Banner from '@layout/banner.astro';
+import TextSection from '@/components/text-section.astro';
 import lundakarnevalen from '@/assets/karnevalen.jpg';
-import Button from '../button.astro';
-import Nationer from '../nationer/nationer.astro';
+import Button from '@/components/button.astro';
+import Nationer from '@/components/nationer/nationer.astro';
+import MoreInLund from '../more-in-lund.astro';
 
 export type Props = {
   locale: Locale;
@@ -22,27 +23,28 @@ const [t, routes] = getTranslations(locale);
 
 <MainLayout title={t('titles.home')} language={locale}>
   <Hero locale={locale} />
+
   <Banner
     title={t('banner.nollning.title')}
     button={t('banner.nollning.button')}
     href={routes('nollning')}
   />
 
-  <div class="h-[80dvh] text-white">
+  <section class="h-[80dvh] text-white" id="welcome">
     <BackgroundOverlay src={domkyrkan} alt="Domkyrkan - Source: Wikipedia">
       <TextSection title={t('welcome.title')}>
         {t('welcome.content')}
       </TextSection>
     </BackgroundOverlay>
-  </div>
+  </section>
 
-  <div class="py-24 max-w text-center">
+  <section class="py-24 max-w text-center">
     <FAQ locale={locale} />
-  </div>
+  </section>
 
   <Nationer locale={locale} />
 
-  <div class="h-[80dvh] text-white">
+  <section class="h-[80dvh] text-white" id="lundkarnevalen">
     <BackgroundOverlay
       src={lundakarnevalen}
       alt="Lundakarnevalen"
@@ -58,5 +60,7 @@ const [t, routes] = getTranslations(locale);
         </Button>
       </div>
     </BackgroundOverlay>
-  </div>
+  </section>
+
+  <MoreInLund locale={locale} />
 </MainLayout>

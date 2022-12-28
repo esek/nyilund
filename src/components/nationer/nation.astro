@@ -1,5 +1,6 @@
 ---
 import { Image } from '@astrojs/image/components';
+import Link from '../link.astro';
 
 export type Props = {
   name: string;
@@ -10,10 +11,8 @@ export type Props = {
 const { name, url, image } = Astro.props;
 ---
 
-<a
+<Link
   href={url}
-  target="_blank"
-  rel="norefferer"
   class="flex flex-col items-center gap-2 font-semibold bg-gray-50 rounded-md p-4 border hover:border-black"
 >
   <Image
@@ -26,4 +25,4 @@ const { name, url, image } = Astro.props;
   <p class="text-center">
     {name}
   </p>
-</a>
+</Link>

@@ -1,0 +1,32 @@
+---
+import MainLayout from '@/layouts/main-layout.astro';
+import { getTranslations } from '@/locales';
+import type { Locale } from '@/models/i18n';
+import e from '@/assets/programs/e.jpg';
+import bme from '@/assets/programs/bme.jpg';
+import ProgramInfo from '../program-info.astro';
+
+export type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const [t] = getTranslations(locale);
+---
+
+<MainLayout title={t('titles.about')} language={locale}>
+  <ProgramInfo
+    title={t('about.programs.e.title')}
+    description={t('about.programs.e.description')}
+    image={e}
+    href="https://www.lth.se/utbildning/elektroteknik"
+    button={t('about.programs.read_more')}
+  />
+  <ProgramInfo
+    title={t('about.programs.bme.title')}
+    description={t('about.programs.bme.description')}
+    image={bme}
+    href="https://www.lth.se/utbildning/medicin-och-teknik"
+    button={t('about.programs.read_more')}
+  />
+</MainLayout>

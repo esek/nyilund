@@ -1,6 +1,6 @@
 ---
-import Button from './button.astro';
-import Heading from './heading.astro';
+import Button from '@/components/button.astro';
+import Heading from '@/components/heading.astro';
 
 export type Props = {
   title: string;
@@ -11,11 +11,11 @@ export type Props = {
 const { title, button, href } = Astro.props;
 ---
 
-<div class="p-12 md:p-24 bg-white text-center space-y-4">
+<section class="p-12 md:p-24 bg-white text-center space-y-4">
   <Heading larger={true}>
     {title}
   </Heading>
   <Button href={href} variant="secondary">
     {button}
   </Button>
-</div>
+</section>

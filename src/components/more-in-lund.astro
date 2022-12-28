@@ -1,0 +1,31 @@
+---
+import { getTranslations } from '@/locales';
+import type { Locale } from '@/models/i18n';
+import Accordion from './accordion.astro';
+import TextSection from './text-section.astro';
+
+export type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const [t] = getTranslations(locale);
+
+const activities = ['spex', 'karer', 'valborg'];
+---
+
+<section class="space-y-24 text-white scroll-mt-24 py-24 text-center max-w">
+  <TextSection title={t('more_in_lund.title')} />
+
+  <div class="space-y-4">
+    {
+      activities.map((activity) => {
+        const key = `more_in_lund.activities.${activity}`;
+
+        return (
+          <Accordion title={t(`${key}.title`)} content={t(`${key}.content`)} />
+        );
+      })
+    }
+  </div>
+</section>

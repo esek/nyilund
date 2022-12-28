@@ -1,7 +1,12 @@
 {
+  "nav": {
+    "about": "Om programmen",
+    "nollning": "Nollning"
+  },
   "titles": {
     "home": "Välkommen till Lund!",
-    "nollning": "Nollningen på E-Sektionen"
+    "nollning": "Nollningen på E-Sektionen",
+    "about": "Om programmen"
   },
   "hero": {
     "home": {
@@ -53,5 +58,36 @@
     "title": "Lundakarnevalen",
     "content": "Det går inte att prata om Lund utan att nämna Lundakarnevalen! Som ett av världens största event helt organiserat av frivilgarbetande studenter är det unikt i sitt slag. Vart fjärde tar studenterna i Lund för en helg över parken vid Domkyrkan, även känt som Lundagård. Hår anordnas allt du kan tänka dig, spelbordar, föreställningar, cirkus, barer, restauranger och mycket mer. Nästa karneval går av stapeln 2026!",
     "button": "Läs mer om Lundakarnevalen"
+  },
+  "more_in_lund": {
+    "title": "Mer att göra i Lund",
+    "content": "Det finns massor av saker att göra i Lund",
+    "activities": {
+      "spex": {
+        "title": "Spex",
+        "content": "Spex kan vara det mest studentikåsa som finns. Det kan nog bäst beskrivas som en teaterpjäs med stort fokus på humor och såång, ofta med referenser till studentlivet och olika händelser i omvärlden. Gillar du att stå på scen, sjunga eller spela instrument är detta perfekt för dig, men det passar även dig som gillar att laga mat, ordna fester, sy, sminka eller bara ha det väldigt roligt!"
+      },
+      "karer": {
+        "title": "Kårer",
+        "content": "De olika programmen vid Lund universitet organiserar sig i studentföreningar som kallas kårer. Deras främsta uppgift är att bedriva studiebevakning och ge studenterna ett socialt sammanhang. Som student vid LTH kommer du vara medlem i Teknologkåren (TLTH) vilket är paraplyorganisationen för de olika sektionerna, däribland E-sektionen. Både TLTH och sektionerna organiserar flera evenemang för sina medlemmar, exempelvis nollningen."
+      },
+      "valborg": {
+        "title": "Valborg",
+        "content": "Valborg i Lund är något alldeles unikt. När solen äntligen kommer fram igen och allt står i full blom väcks hela staden till liv. En av Sveriges största spontanfester äger rum i stadsparken, nationerna bjuder in till konserter och fester och från varje balkong hörs glada rop och ståhej. En dag (eller flera) som lockar både studenter och folk från hela Skåne."
+      }
+    }
+  },
+  "about": {
+    "programs": {
+      "e": {
+        "title": "Elektroteknik",
+        "description": " Elektroteknik handlar om att utveckla framtidens teknik och samhälle i allt från medicinsk utrustning till självkörande fordon, robotar, 5G-nät och förnyelsebara energikällor. Efter utbildningen finns det en god arbetsmarknad där du har möjlighet att skapa hållbara lösningar för dagens och morgondagens samhälle. "
+      },
+      "bme": {
+        "title": "Medicin och Teknik",
+        "description": "Utbildningen i Medicin och teknik vid LTH är unik i Sverige och är till för dig som är tvärvetenskapligt intresserad och som vill lägga grunden till framtidens hälsa. Här ger vi dig de kunskaper som efterfrågas inom såväl medicinteknisk industri och forskning som hälso- och sjukvård. Programmet är utvecklat i samarbete med industrin och betonar därför design och innovation med patientsäkerhet som viktigt krav. Flera kurser ges på sjukhuset för att du ska få nyttiga insikter i hur medicintekniska produkter används i vården. "
+      },
+      "read_more": "Läs mer på lth.se"
+    }
   }
 }

@@ -1,0 +1,28 @@
+---
+import BackgroundOverlay from '@layout/background-overlay.astro';
+import Button from './button.astro';
+import TextSection from './text-section.astro';
+
+export type Props = {
+  title: string;
+  description: string;
+  image: ImageMetadata;
+  href: string;
+  button: string;
+};
+
+const { title, description, image, href, button } = Astro.props;
+---
+
+<section class="h-[100dvh] text-white">
+  <BackgroundOverlay src={image} alt={title} width={1920} aspectRatio={16 / 9}>
+    <div class="flex flex-col items-center gap-4">
+      <TextSection title={title}>
+        {description}
+      </TextSection>
+      <Button href={href}>
+        {button}
+      </Button>
+    </div>
+  </BackgroundOverlay>
+</section>

@@ -2,9 +2,11 @@
 import { getTranslations } from '@/locales';
 import type { FaqQuestion } from '@/models/faq';
 import type { Locale } from '@/models/i18n';
-import Button from '../button.astro';
-import Heading from '../heading.astro';
-import FaqQuestionComponent from './faq-question.astro';
+import Accordion from './accordion.astro';
+import Button from './button.astro';
+import Heading from './heading.astro';
+import Link from './link.astro';
+import TextSection from './text-section.astro';
 
 export type Props = {
   locale: Locale;
@@ -14,7 +16,7 @@ const { locale } = Astro.props;
 const [t] = getTranslations(locale);
 
 const CONTACT_URL = 'https://esek.se/contact';
-const content = await Astro.glob<FaqQuestion>('../../content/faq/*/*.md');
+const content = await Astro.glob<FaqQuestion>('../content/faq/*/*.md');
 
 const questions = content.filter((c) => {
   const localePath = c.file.split('/').at(-2);
@@ -23,26 +25,18 @@ const questions = content.filter((c) => {
 ---
 
 <section class="space-y-24 text-white scroll-mt-24" id="faq">
-  <div class="space-y-2">
-    <Heading larger={true}>
-      {t('faq.title')}
-    </Heading>
-    <p class="max-w-md mx-auto">
-      {t('faq.description')}
-      {' '}
-      <a href={CONTACT_URL} target="_blank" rel="noreferrer">
-        {t('faq.contact')}
-      </a>
-    </p>
-  </div>
+  <TextSection title={t('faq.title')}>
+    {t('faq.description')}
+    {' '}
+    <Link href={CONTACT_URL}>
+      {t('faq.contact')}
+    </Link>
+  </TextSection>
 
   <div class="space-y-4">
     {
       questions.map(({ frontmatter, compiledContent }) => (
-        <FaqQuestionComponent
-          title={frontmatter.title}
-          content={compiledContent()}
-        />
+        <Accordion title={frontmatter.title} content={compiledContent()} />
       ))
     }
   </div>

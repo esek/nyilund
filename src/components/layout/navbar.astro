@@ -1,0 +1,42 @@
+---
+import { getTranslations } from '@/locales';
+import type { Locale } from '@/models/i18n';
+import Logo from '@/components/logo.astro';
+import Link from '../link.astro';
+
+export type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const [t, routes] = getTranslations(locale);
+
+const navLinks = [
+  {
+    label: t('nav.about'),
+    href: routes('about'),
+  },
+  {
+    label: t('nav.nollning'),
+    href: routes('nollning'),
+  },
+  {
+    label: 'E-Sektionen',
+    href: 'https://esek.se',
+  },
+];
+---
+
+<header
+  class="py-4 fixed top-0 left-0 right-0 bg-black/50 z-[999] text-white backdrop-blur-sm"
+>
+  <div class="max-w flex items-center justify-between">
+    <a href={routes('home')} class="h-12 aspect-square block" aria-label="Home">
+      <Logo />
+    </a>
+
+    <nav class="items-center gap-4 font-semibold hidden md:flex">
+      {navLinks.map((link) => <Link href={link.href}>{link.label}</Link>)}
+    </nav>
+  </div>
+</header>

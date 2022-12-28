@@ -1,5 +1,5 @@
 ---
-import BackgroundOverlay from '@/components/background-overlay.astro';
+import BackgroundOverlay from '@layout/background-overlay.astro';
 import heroImage from '@/assets/e-house.png';
 import Button from './button.astro';
 import type { Locale } from '@/models/i18n';
@@ -10,10 +10,10 @@ export type Props = {
 };
 
 const { locale } = Astro.props;
-const [t] = getTranslations(locale);
+const [t, routes] = getTranslations(locale);
 ---
 
-<div class="h-[100dvh]">
+<section class="h-[100dvh]">
   <BackgroundOverlay
     src={heroImage}
     alt="E-Huset LTH"
@@ -32,7 +32,7 @@ const [t] = getTranslations(locale);
       </p>
 
       <div class="flex items-center gap-4 flex-col md:flex-row mt-2">
-        <Button href="">
+        <Button href={routes('about')}>
           {t('hero.home.cta.about')}
         </Button>
         <Button href="#faq">
@@ -41,4 +41,4 @@ const [t] = getTranslations(locale);
       </div>
     </div>
   </BackgroundOverlay>
-</div>
+</section>

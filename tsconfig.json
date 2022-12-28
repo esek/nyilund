@@ -3,6 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@layout/*": ["src/components/layout/*"],
+      "@pages/*": ["src/components/pages/*.astro"],
       "@/*": ["src/*"]
     }
   }
