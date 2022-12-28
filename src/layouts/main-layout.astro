@@ -6,15 +6,15 @@ import Navbar from '@/components/layout/navbar.astro';
 
 export type Props = {
   title: string;
-  language: Locale;
+  locale: Locale;
 };
 
-const { title, language } = Astro.props;
+const { title, locale } = Astro.props;
 const description =
   'Lund kan kännas som en liten stad, men med nästan hälften av befolkningen som studenter finns det alltid något att göra. Som ny student möts du av en uppsjö av föreningar som sysslar med allt från spex, fester och olika sporter, allt bara några minuter bort på cykeln. ';
 ---
 
-<html lang={language}>
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -31,12 +31,12 @@ const description =
     <title>{title} | E-Sektionen inom TLTH</title>
   </head>
   <body class="bg-primary-black">
-    <Navbar locale={language} />
+    <Navbar locale={locale} />
 
     <main>
       <slot />
     </main>
 
-    <Footer locale={language} />
+    <Footer locale={locale} />
   </body>
 </html>

@@ -21,7 +21,7 @@ const { locale } = Astro.props;
 const [t, routes] = getTranslations(locale);
 ---
 
-<MainLayout title={t('titles.home')} language={locale}>
+<MainLayout title={t('titles.home')} locale={locale}>
   <Hero locale={locale} />
 
   <Banner

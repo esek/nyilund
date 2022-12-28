@@ -15,7 +15,7 @@ const { locale } = Astro.props;
 const [t] = getTranslations(locale);
 ---
 
-<MainLayout language={locale} title={t('titles.nollning')}>
+<MainLayout locale={locale} title={t('titles.nollning')}>
   <div class="h-[100dvh]">
     <BackgroundOverlay
       alt="Nollning"

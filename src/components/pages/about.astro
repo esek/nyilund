@@ -14,7 +14,7 @@ const { locale } = Astro.props;
 const [t] = getTranslations(locale);
 ---
 
-<MainLayout title={t('titles.about')} language={locale}>
+<MainLayout title={t('titles.about')} locale={locale}>
   <ProgramInfo
     title={t('about.programs.e.title')}
     description={t('about.programs.e.description')}
