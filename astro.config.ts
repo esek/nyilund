@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import image from '@astrojs/image';
 import tailwind from '@astrojs/tailwind';
 import robotsTxt from 'astro-robots-txt';
-import { locales, DEFAULT_LOCALE } from './src/locales';
+import { locales, DEFAULT_LOCALE } from './src/lib/localization';
 
 const otherLocales = Object.values(locales).reduce(
   (acc, curr) => ({
