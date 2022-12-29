@@ -1,5 +1,5 @@
 ---
-import { getTranslations } from '@/locales';
+import { getTranslations, locales } from '@/lib/localization';
 import type { Locale } from '@/models/i18n';
 import Logo from '@/components/logo.astro';
 import Link from '../link.astro';
@@ -26,25 +26,7 @@ const navLinks = [
   },
 ];
 
-type LocaleInfo = {
-  label: string;
-  href: string;
-};
-
-const availableLocales: Record<Locale, LocaleInfo> = {
-  sv: {
-    label: 'SWE',
-    href: routes('home', 'sv'),
-  },
-  en: {
-    label: 'ENG',
-    href: routes('home', 'en'),
-  },
-};
-
-const otherLocale = Object.entries(availableLocales).find(
-  ([l]) => l !== locale
-)![1];
+const otherLocale = Object.values(locales).find((l) => l.key !== locale)!;
 ---
 
 <header
@@ -61,10 +43,10 @@ const otherLocale = Object.entries(availableLocales).find(
       </nav>
 
       <Link
-        href={otherLocale.href}
+        href={routes('home', otherLocale.key)}
         class="block text-sm px-4 py-1 border rounded-sm bg-white/10"
       >
-        {otherLocale.label}
+        {otherLocale.short}
       </Link>
     </div>
   </div>

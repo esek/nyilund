@@ -3,7 +3,7 @@ import type { Locale } from '@/models/i18n';
 import '@/styles/main.scss';
 import Footer from '@/components/layout/footer.astro';
 import Navbar from '@/components/layout/navbar.astro';
-import { DEFAULT_LOACLE, getTranslations, locales } from '@/locales';
+import { DEFAULT_LOCALE, getTranslations, locales } from '@/lib/localization';
 import Analytics from '@/components/analytics.astro';
 
 export type Props = {
@@ -28,7 +28,7 @@ const baseUrl = Astro.url.origin;
     <meta name="description" content={description} />
     {
       Object.keys(locales).map((locale) => {
-        const isDefault = locale === DEFAULT_LOACLE;
+        const isDefault = locale === DEFAULT_LOCALE;
         const path = isDefault ? '' : `/${locale}`;
         const lang = isDefault ? 'x-default' : locale;
 

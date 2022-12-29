@@ -3,7 +3,7 @@ import BackgroundOverlay from '@layout/background-overlay.astro';
 import heroImage from '@/assets/e-house.png';
 import Button from './button.astro';
 import type { Locale } from '@/models/i18n';
-import { getTranslations } from '@/locales';
+import { getTranslations } from '@/lib/localization';
 
 export type Props = {
   locale: Locale;
