@@ -1,7 +1,7 @@
 import type { Locale } from '@/models/i18n';
 import { type Page, pages } from './pages';
 import get from 'lodash/get';
-import { sv, en } from '@/locales';
+import { sv, en } from '../locales';
 
 interface Translations {
   [key: string]: string | Translations;
