@@ -27,7 +27,7 @@
     },
     "nollning": {
       "title": "Nollningen på E-Sektionen",
-      "subtitle": "Nollningen på E-sektionen är till för att välkomna alla nya studenter till Lund, LTH och E-sektionen. Som Nolla kan man vara väldigt vilsen, man kan till exempel tappa bort sig i E-husets lokaler, glömma bort tiden, eller kanske till och med ta ett dopp i sjön Sjøn. Det är just därför som det finns Phøs, Phaddrar och en hel sektion med ett hjärta av guld som är här för att vägleda dig under din första tid som student."
+      "subtitle": "Nollningen på E-sektionen är till för att välkomna alla nya studenter till Lund, LTH och E-sektionen. Som Nolla kan man vara väldigt vilsen, man kan till exempel tappa bort sig i E-husets lokaler, glömma bort tiden, eller kanske till och med ta ett dopp i Sjön Sjøn. Det är just därför som det finns Phøs, Phaddrar och en hel sektion med ett hjärta av guld som är här för att vägleda dig under din första tid som student."
     }
   },
   "banner": {
@@ -64,7 +64,7 @@
   },
   "lundakarnevalen": {
     "title": "Lundakarnevalen",
-    "content": "Det går inte att prata om Lund utan att nämna Lundakarnevalen! Som ett av världens största event helt organiserat av frivilgarbetande studenter är det unikt i sitt slag. Vart fjärde tar studenterna i Lund för en helg över parken vid Domkyrkan, även känt som Lundagård. Hår anordnas allt du kan tänka dig, spelbordar, föreställningar, cirkus, barer, restauranger och mycket mer. Nästa karneval går av stapeln 2026!",
+    "content": "Det går inte att prata om Lund utan att nämna Lundakarnevalen! Som ett av världens största event helt organiserat av frivilligt arbetande studenter är det unikt i sitt slag. Vart fjärde tar studenterna i Lund för en helg över parken vid Domkyrkan, även känt som Lundagård. Här anordnas allt du kan tänka dig: spelbordar, föreställningar, cirkus, barer, restauranger och mycket mer. Nästa karneval går av stapeln 2026!",
     "button": "Läs mer om Lundakarnevalen"
   },
   "more_in_lund": {
@@ -73,7 +73,7 @@
     "activities": {
       "spex": {
         "title": "Spex",
-        "content": "Spex kan vara det mest studentikåsa som finns. Det kan nog bäst beskrivas som en teaterpjäs med stort fokus på humor och såång, ofta med referenser till studentlivet och olika händelser i omvärlden. Gillar du att stå på scen, sjunga eller spela instrument är detta perfekt för dig, men det passar även dig som gillar att laga mat, ordna fester, sy, sminka eller bara ha det väldigt roligt!"
+        "content": "Spex kan vara det mest studentikåsa som finns. Det kan nog bäst beskrivas som en teaterpjäs med stort fokus på humor och sång, ofta med referenser till studentlivet och olika händelser i omvärlden. Gillar du att stå på scen, sjunga eller spela instrument är detta perfekt för dig! Men givetvis passar det även dig som gillar att laga mat, arbeta med teknik, ordna fester, sy, sminka eller bara ha det väldigt roligt!"
       },
       "karer": {
         "title": "Kårer",

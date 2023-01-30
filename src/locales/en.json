@@ -27,19 +27,19 @@
     },
     "nollning": {
       "title": "The nollning at the E-Guild",
-      "subtitle": ""
+      "subtitle": "The reset at the E section is to welcome all new students to Lund, LTH and the E section. As a Nolla, you can be very lost, you can, for example, lose yourself in the premises of the E-house, forget time, or maybe even take a dip in Sjön Sjøn. That is precisely why there are Phøs, Phaddrar and a whole guild with a heart of gold that is here to guide you through your first time as a student."
     }
   },
   "banner": {
     "nollning": {
       "title": "Looking for information about the nollning?",
       "button": "About the nollning",
-      "check_website": "Check out the nollningswebsite!"
+      "check_website": "Check out the nollning website!"
     }
   },
   "welcome": {
     "title": "Hello and welcome to Lund!",
-    "content": ""
+    "content": "Lund may feel like a small town, but with almost half of the population being students, there is always something to do. As a new student, you are greeted by a multitude of associations that deal with everything from spex, parties and various sports, all just a few minutes away by bike. Lund would not have been the city it is without the students and that is why it is considered Sweden's best student city."
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -51,20 +51,20 @@
   "nollning": {
     "what": {
       "title": "What is the nollning?",
-      "content": ""
+      "content": "The reset is a mix of play, frolic, party and studying, which means there is something for everyone. What is certain is that it will give you precious memories for a lifetime. On the first day at LTH, you are divided into a mentor group and will be directly introduced to both newly admitted and old students. The phadders who have experience of life at LTH will help and support you and will be able to answer all kinds of questions. The phadder group will be a safe point throughout the nollning, but over time you will of course socialize with others at the reset as well!"
     },
     "differences": {
-      "title": "Differences from Gymnasiet",
-      "content": ""
+      "title": "Differences from other universities",
+      "content": "If you have heard horror stories about various arrival activities for new students (nollning), it is important to know that the nollning at LTH is for you and for you to feel safe and welcome. The nollning is completely voluntary and the large mix of activities means that you can participate in what suits your interests. The most important thing is that EVERYONE who participates should feel that they become part of a guild's community, feel safe at LTH and make friends for life."
     }
   },
   "nations": {
     "title": "Nations in Lund",
-    "content": ""
+    "content": "Nations are probably the most classic associations in Lund and what you often think of when Lund's student life is mentioned. In the old days, you joined the nation that represented the country or geographic region you came from, but nowadays all students can join any nation they want. Common to all nations is that all students are often welcome at the events organized, even if they are not members. However, members can receive certain benefits such as cheaper entry or standing in the nation's housing queue. So look around at the different nations below and see which one suits you best! If you are not satisfied with the nation you have joined, you can always change next term!"
   },
   "lundakarnevalen": {
     "title": "Lundakarnevalen",
-    "content": "",
+    "content": "You can't talk about Lund without mentioning the Lund Carnival! As one of the world's largest events organized entirely by volunteering students, it is unique in its kind. Every fourth year, the students in Lund take a weekend across the park at the Cathedral, also known as Lundagård. Everything you can think of is arranged here: game tables, shows, circus, bars, restaurants and much more. The next carnival starts in 2026!",
     "button": "Read more about Lundakarnevalen"
   },
   "more_in_lund": {
@@ -73,29 +73,29 @@
     "activities": {
       "spex": {
         "title": "Spex",
-        "content": ""
+        "content": "Spex may be the most classic Lund student experience out there. It can probably be best described as a theater piece with a strong focus on humor and song, often with references to student life and various events in the outside world. If you like being on stage, singing or playing instruments, this is perfect for you! But of course it also suits you who like to cook, work with technology, organize parties, sew, make-up or just have a lot of fun!"
       },
       "karer": {
         "title": "Kårer",
-        "content": ""
+        "content": "The various programs at Lund University organize themselves in student associations called \"kårer\". Their main task is to monitor studies and provide the students with a social context. As a student at LTH, you will be a member of the Teknologkåren (TLTH), which is the umbrella organization for the various guilds, including the E-guild. Both TLTH and the guilds organize several events for their members, for example nollningen."
       },
       "valborg": {
         "title": "Last of April (Valborg)",
-        "content": ""
+        "content": "Valborg in Lund is something completely unique. When the sun finally comes out again and everything is in full bloom, the whole city comes alive. One of Sweden's largest spontaneous parties takes place in the city park, the nations invite to concerts and parties and from every balcony happy shouts and noise are heard. A day (or several) that attracts both students and people from all over Scania."
       }
     }
   },
   "about": {
     "programs": {
       "e": {
-        "title": "Elektroteknik",
-        "description": " Elektroteknik handlar om att utveckla framtidens teknik och samhälle i allt från medicinsk utrustning till självkörande fordon, robotar, 5G-nät och förnyelsebara energikällor. Efter utbildningen finns det en god arbetsmarknad där du har möjlighet att skapa hållbara lösningar för dagens och morgondagens samhälle. "
+        "title": "Electrical Engineering",
+        "description": "Electrical engineering is about developing the technology and society of the future in everything from medical equipment to self-driving vehicles, robots, 5G networks and renewable energy sources. After the education, there is a good job market where you have the opportunity to create sustainable solutions for today's and tomorrow's society."
       },
       "bme": {
-        "title": "Medicin och Teknik",
-        "description": "Utbildningen i Medicin och teknik vid LTH är unik i Sverige och är till för dig som är tvärvetenskapligt intresserad och som vill lägga grunden till framtidens hälsa. Här ger vi dig de kunskaper som efterfrågas inom såväl medicinteknisk industri och forskning som hälso- och sjukvård. Programmet är utvecklat i samarbete med industrin och betonar därför design och innovation med patientsäkerhet som viktigt krav. Flera kurser ges på sjukhuset för att du ska få nyttiga insikter i hur medicintekniska produkter används i vården. "
+        "title": "Biomedical Engineering",
+        "description": "The education in biomedical engineering at LTH is unique in Sweden and is for those with an interdisciplinary interest and who want to lay the foundation for the health of the future. Here we provide you with the knowledge that is in demand in both the medical technology industry and research as well as health care. The program is developed in collaboration with industry and therefore emphasizes design and innovation with patient safety as an important requirement. Several courses are given at the hospital so that you can gain useful insights into how medical devices are used in healthcare. "
       },
-      "read_more": "Läs mer på lth.se"
+      "read_more": "Read more at lth.se/english/"
     }
   }
 }
