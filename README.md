@@ -5,13 +5,14 @@ A website for new students at Lund University in order for them to get a head st
 ## 💻 Technologies
 
 - [Node.js 16](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/)
+- [pnpm](https://pnpm.io/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Astro](https://astro.build/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## 🚀 Getting started
-> Make sure you have Node.js 16 and Yarn installed before continuing.
+>
+> Make sure you have Node.js 16 and pnpm installed before continuing.
 
 1. Clone the repository
 
@@ -22,13 +23,13 @@ git clone git@github.com:esek/nyilund.git
 2. Install dependencies
 
 ```bash
-yarn
+pnpm install
 ```
 
 3. Start the development server
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ## 🌏 Localization
@@ -40,6 +41,7 @@ Then, all subcomponents that require translations also have a `locale` prop.
 This can then be used in conjuction with the [`getTranslations`](./src/locales/index.ts) function to retrieve a tuple of the translation function as well as the routes for the current locale.
 
 ### Translations
+
 The translations are placed in the [`locales`](./src/locales) folder, and exported from the [`index.ts`](./src/locales/index.ts) file.
 
 ## ❓ FAQ
