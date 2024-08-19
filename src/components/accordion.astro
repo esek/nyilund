@@ -1,5 +1,5 @@
 ---
-import Heading from './heading.astro';
+import Heading from "./heading.astro";
 
 export type Props = {
   title: string;
@@ -15,7 +15,10 @@ const { title, content } = Astro.props;
       {title}
     </Heading>
   </summary>
-  <div set:html={content} class="px-8 pb-8 max-w-6xl" />
+  <div
+    set:html={content}
+    class="px-8 pb-8 max-w-6xl prose-invert prose-a:underline prose-a:font-medium"
+  />
 </details>
 
 <style lang="scss">

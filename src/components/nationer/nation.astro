@@ -1,11 +1,11 @@
 ---
-import { Image } from '@astrojs/image/components';
-import Link from '../link.astro';
+import { Image } from "astro:assets";
+import Link from "../link.astro";
 
 export type Props = {
   name: string;
   url: string;
-  image: ImageMetadata | string;
+  image: ImageMetadata;
 };
 
 const { name, url, image } = Astro.props;

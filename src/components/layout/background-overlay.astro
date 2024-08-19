@@ -1,11 +1,10 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Image } from "astro:assets";
 export type Props = {
-  src: ImageMetadata | string;
+  src: ImageMetadata;
   alt: string;
   height?: number;
   width?: number;
-  aspectRatio?: number;
 };
 ---
 

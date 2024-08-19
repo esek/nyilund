@@ -1,11 +1,11 @@
 ---
-import MainLayout from '@/layouts/main-layout.astro';
-import { getTranslations } from '@/lib/localization';
-import type { Locale } from '@/models/i18n';
-import BackgroundOverlay from '@layout/background-overlay.astro';
-import nollningImage from '@/assets/nollning.png';
-import Banner from '@layout/banner.astro';
-import TextSection from '../text-section.astro';
+import MainLayout from "@/layouts/main-layout.astro";
+import { getTranslations } from "@/lib/localization";
+import type { Locale } from "@/models/i18n";
+import BackgroundOverlay from "@layout/background-overlay.astro";
+import nollningImage from "@/assets/nollning.png";
+import Banner from "@layout/banner.astro";
+import TextSection from "../text-section.astro";
 
 export type Props = {
   locale: Locale;
@@ -15,38 +15,38 @@ const { locale } = Astro.props;
 const [t] = getTranslations(locale);
 ---
 
-<MainLayout locale={locale} title={t('titles.nollning')}>
+<MainLayout locale={locale} title={t("titles.nollning")}>
   <div class="h-[100dvh]">
     <BackgroundOverlay
       alt="Nollning"
       src={nollningImage}
       width={1920}
-      aspectRatio={16 / 9}
+      height={1080}
     >
       <div class="flex items-center justify-center flex-col text-white gap-4">
         <h1 class="font-black text-4xl md:text-8xl text-center">
-          {t('hero.nollning.title')}
+          {t("hero.nollning.title")}
         </h1>
 
         <p class="max-w-xl text-center text-lg">
-          {t('hero.nollning.subtitle')}
+          {t("hero.nollning.subtitle")}
         </p>
       </div>
     </BackgroundOverlay>
   </div>
 
   <div class="text-white py-24 max-w text-center space-y-12">
-    <TextSection title={t('nollning.what.title')}>
-      {t('nollning.what.content')}
+    <TextSection title={t("nollning.what.title")}>
+      {t("nollning.what.content")}
     </TextSection>
 
-    <TextSection title={t('nollning.differences.title')}>
-      {t('nollning.differences.content')}
+    <TextSection title={t("nollning.differences.title")}>
+      {t("nollning.differences.content")}
     </TextSection>
   </div>
 
   <Banner
-    title={t('banner.nollning.check_website')}
+    title={t("banner.nollning.check_website")}
     button="nollning.esek.se"
     href="https://nollning.esek.se"
   />

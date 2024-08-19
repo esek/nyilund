@@ -1,17 +1,17 @@
 ---
-import MainLayout from '@/layouts/main-layout.astro';
-import Hero from '@/components/hero.astro';
-import BackgroundOverlay from '@layout/background-overlay.astro';
-import FAQ from '@/components/faq.astro';
-import domkyrkan from '@/assets/domkyrkan.jpeg';
-import type { Locale } from '@/models/i18n';
-import { getTranslations } from '@/lib/localization';
-import Banner from '@layout/banner.astro';
-import TextSection from '@/components/text-section.astro';
-import lundakarnevalen from '@/assets/karnevalen.jpg';
-import Button from '@/components/button.astro';
-import Nationer from '@/components/nationer/nationer.astro';
-import MoreInLund from '../more-in-lund.astro';
+import MainLayout from "@/layouts/main-layout.astro";
+import Hero from "@/components/hero.astro";
+import BackgroundOverlay from "@layout/background-overlay.astro";
+import FAQ from "@/components/faq.astro";
+import domkyrkan from "@/assets/domkyrkan.jpeg";
+import type { Locale } from "@/models/i18n";
+import { getTranslations } from "@/lib/localization";
+import Banner from "@layout/banner.astro";
+import TextSection from "@/components/text-section.astro";
+import lundakarnevalen from "@/assets/karnevalen.jpg";
+import Button from "@/components/button.astro";
+import Nationer from "@/components/nationer/nationer.astro";
+import MoreInLund from "../more-in-lund.astro";
 
 export type Props = {
   locale: Locale;
@@ -21,19 +21,24 @@ const { locale } = Astro.props;
 const [t, routes] = getTranslations(locale);
 ---
 
-<MainLayout title={t('titles.home')} locale={locale}>
+<MainLayout title={t("titles.home")} locale={locale}>
   <Hero locale={locale} />
 
   <Banner
-    title={t('banner.nollning.title')}
-    button={t('banner.nollning.button')}
-    href={routes('nollning')}
+    title={t("banner.nollning.title")}
+    button={t("banner.nollning.button")}
+    href={routes("nollning")}
   />
 
   <section class="h-[80dvh] text-white" id="welcome">
-    <BackgroundOverlay src={domkyrkan} alt="Domkyrkan - Source: Wikipedia">
-      <TextSection title={t('welcome.title')}>
-        {t('welcome.content')}
+    <BackgroundOverlay
+      src={domkyrkan}
+      alt="Domkyrkan - Source: Wikipedia"
+      width={1920}
+      height={1080}
+    >
+      <TextSection title={t("welcome.title")}>
+        {t("welcome.content")}
       </TextSection>
     </BackgroundOverlay>
   </section>
@@ -49,14 +54,14 @@ const [t, routes] = getTranslations(locale);
       src={lundakarnevalen}
       alt="Lundakarnevalen"
       width={1920}
-      aspectRatio={16 / 9}
+      height={1080}
     >
       <div class="flex flex-col items-center gap-4">
-        <TextSection title={t('lundakarnevalen.title')}>
-          {t('lundakarnevalen.content')}
+        <TextSection title={t("lundakarnevalen.title")}>
+          {t("lundakarnevalen.content")}
         </TextSection>
         <Button href="https://lundakarnevalen.se/">
-          {t('lundakarnevalen.button')}
+          {t("lundakarnevalen.button")}
         </Button>
       </div>
     </BackgroundOverlay>

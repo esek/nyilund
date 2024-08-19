@@ -1,12 +1,12 @@
 ---
 export type Props = {
   href: string;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
 };
 
-const { href, variant = 'primary' } = Astro.props;
+const { href, variant = "primary" } = Astro.props;
 
-const target = href.startsWith('http') ? '_blank' : null;
+const target = href.startsWith("http") ? "_blank" : null;
 ---
 
 <a href={href} data-variant={variant} target={target}>
@@ -15,18 +15,18 @@ const target = href.startsWith('http') ? '_blank' : null;
 
 <style lang="scss">
   a {
-    --background: theme('colors.white');
-    --color: theme('colors.black');
-
-    &[data-variant='secondary'] {
-      --background: theme('colors.black');
-      --color: theme('colors.white');
-    }
+    --background: theme("colors.white");
+    --color: theme("colors.black");
 
     background: var(--background);
     color: var(--color);
 
     @apply px-12 py-3 inline-block font-semibold rounded-sm;
+
+    &[data-variant="secondary"] {
+      --background: theme("colors.black");
+      --color: theme("colors.white");
+    }
 
     &:hover {
       @apply opacity-80;
