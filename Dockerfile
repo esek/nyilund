@@ -2,17 +2,19 @@ FROM node:16-alpine as builder
 
 WORKDIR /app
 
-COPY package.json .
-COPY yarn.lock .
+RUN npm install -g pnpm
 
-RUN yarn install --frozen-lockfile
+COPY package.json .
+COPY pnpm-lock.yaml .
+
+RUN pnpm install --frozen-lockfile
 
 COPY . .
 
 ARG DEPLOY_URL
 ENV DEPLOY_URL=${DEPLOY_URL}
 
-RUN yarn build
+RUN pnpm run build
 
 FROM nginx:alpine
 
