@@ -1,5 +1,5 @@
 ---
-title: "How do memberships work? What is Studentlund? TLTH?"
+title: "How do memberships work? When do I need to be a member of Studentlund and TLTH?"
 ---
 In order to attend any events at nations or get accomodation at AF Bostäder, you need to be a member of <a href="https://www.studentlund.se/en/">Studentlund</a> where you have to join a nation. 
 
