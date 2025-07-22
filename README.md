@@ -11,7 +11,7 @@ A website for new students at Lund University in order for them to get a head st
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## 🚀 Getting started
->
+
 > Make sure you have Node.js 16 and pnpm installed before continuing.
 
 1. Clone the repository
