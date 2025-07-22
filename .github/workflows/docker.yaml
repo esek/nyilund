@@ -13,5 +13,5 @@ jobs:
     uses: esek/workflows/.github/workflows/main.yaml@main
     secrets: inherit
     with:
-      prod_only: true
       disable_testing: true
+      only_prod: true
